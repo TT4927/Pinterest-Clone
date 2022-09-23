@@ -1,24 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 import PinterestIcon from '@mui/icons-material/Pinterest';
 // import { CenterFocusStrong } from '@mui/icons-material';
 // import { height, padding, style } from '@mui/system';
 import IconButton from '@mui/material/IconButton';
-import SearchIcon from '@mui/material/SearchIcon';
-import NotificationsIcon from '@mui/material/NotificationsIcon';
-import FaceIcon from '@mui/material/FaceIcon';
-import TextSmsIcon from '@mui/material/TextsmsIcon';
-import KeyboardArrowDownIcon from '@mui/material/KeyboardArrowDownIcon';
+import SearchIcon from '@mui/icons-material/Search';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import FaceIcon from '@mui/icons-material/Face';
+import TextSmsIcon from '@mui/icons-material/Textsms';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
-
-
-
-
-
+// var Header = React.createClass({
+// render: 
 function Header() {
-  return ( 
-      <div>  
+  return (  
       <Wrapper>
           <LogoWrapper>
               <IconButton>
@@ -31,9 +26,10 @@ function Header() {
           <FollowingButton>
             <a href="/">Following</a>
           </FollowingButton>
+
+          
            <SearchWrapper>
               <SearchBarWrapper>
-              </SearchBarWrapper>
               <IconButton>
                   <SearchIcon />
               </IconButton>
@@ -41,15 +37,28 @@ function Header() {
                   <input type = 'text' />
                   <button type = 'submit'></button>
               </form>
+              </SearchBarWrapper> 
               </SearchWrapper>
-              <Iconwrapperwrapper>
-                </Iconwrapperwrapper> 
-      </Wrapper>  
-     
-      </div>
-   
-  )
+
+
+              <IconsWrapper>
+                  <IconButton>
+                      <NotificationsIcon />
+                  </IconButton>
+                  <IconButton>
+                      <TextSmsIcon /> 
+                  </IconButton>
+                  <IconButton>
+                      <FaceIcon />
+                      </IconButton> 
+                      <IconButton>
+                          <KeyboardArrowDownIcon />
+                          </IconButton>
+                </IconsWrapper>
+                </Wrapper>
+  );
 }
+// });
 
 export default Header
 
@@ -134,3 +143,9 @@ const SearchBarWrapper = styled.div`
         outline: none;
     }
 `
+const IconsWrapper= styled.div``
+
+// ReactDOM.render(
+//     <Header />,
+//     document.getElementById('app'),
+// );
